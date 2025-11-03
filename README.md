@@ -1,19 +1,25 @@
 # YouTube Playlist Loop Enabler
 
-A Chrome extension that automatically enables "Loop Playlist" mode on YouTube playlist pages.
+A Chrome/Arc extension that automatically enables "Loop Playlist" mode on YouTube playlist pages. Never worry about manually enabling loop mode again!
 
 ## Features
 
-- Automatically enables loop playlist mode when a playlist is loaded
-- Works when playlist items are selected or skipped
-- Activates on page refresh
-- Runs silently in the background
+- 🔄 Automatically enables loop playlist mode when a playlist is loaded
+- ⏭️ Works when playlist items are selected or skipped
+- 🔃 Activates on page refresh
+- 🤫 Runs silently in the background - no configuration needed
 
-## Installation in Arc Browser
+## Installation
 
-Arc browser is built on Chromium, so Chrome extensions work seamlessly. Here's how to install:
+### Step 1: Download the Extension
 
-### Method 1: Load Unpacked Extension (Recommended)
+1. Go to the [Releases](https://github.com/gustavocaiano/yt-loop-extension/releases) page
+2. Download the latest `yt-loop-extension.zip` file
+3. Extract the ZIP file to a folder on your computer (remember where you saved it!)
+
+### Step 2: Load the Extension
+
+#### For Arc Browser:
 
 1. **Open Arc Browser** and navigate to:
    ```
@@ -25,29 +31,38 @@ Arc browser is built on Chromium, so Chrome extensions work seamlessly. Here's h
    - Toggle the "Developer mode" switch in the top-right corner
 
 3. **Load the Extension**:
-   - Click "Load unpacked" button
-   - Navigate to and select the folder containing this extension:
-     ```
-     /Users/gustavocaiano/docs/github/yt-loop-extension
-     ```
+   - Click the **"Load unpacked"** button
+   - Navigate to and select the **extracted folder** (the one containing `manifest.json`)
+   - Click "Select Folder" or "Open"
 
 4. **Verify Installation**:
    - You should see "YouTube Playlist Loop Enabler" in your extensions list
-   - The extension icon should appear in your toolbar
+   - The extension is now active!
 
-### Method 2: Using Arc's Extension Menu
+#### For Chrome Browser:
 
-1. Open Arc browser
-2. Click the extensions icon in the toolbar (or press `Cmd+Shift+E`)
-3. Click "Manage Extensions"
-4. Enable Developer Mode
-5. Click "Load unpacked" and select the extension folder
+1. **Open Chrome** and navigate to:
+   ```
+   chrome://extensions/
+   ```
+
+2. **Enable Developer Mode**:
+   - Toggle the "Developer mode" switch in the top-right corner
+
+3. **Load the Extension**:
+   - Click the **"Load unpacked"** button
+   - Navigate to and select the **extracted folder** (the one containing `manifest.json`)
+   - Click "Select Folder" or "Open"
+
+4. **Verify Installation**:
+   - You should see "YouTube Playlist Loop Enabler" in your extensions list
+   - The extension is now active!
 
 ## Usage
 
 1. Navigate to any YouTube playlist (URL contains `list=`)
-2. The extension will automatically enable loop mode
-3. No configuration needed - it works automatically!
+2. The extension will **automatically enable loop mode** - no action needed!
+3. Works every time you load, refresh, or skip items in a playlist
 
 ## How It Works
 
@@ -62,22 +77,29 @@ Arc browser is built on Chromium, so Chrome extensions work seamlessly. Here's h
   - Make sure you're on a YouTube playlist page (URL should contain `list=`)
   - Check the browser console (F12) for any error messages
   - Try refreshing the YouTube page
+  - Make sure you extracted the ZIP file and selected the folder (not the ZIP)
 
 - **Extension disappeared after restart?**
-  - This is normal for unpacked extensions
-  - Simply reload it using "Load unpacked" again
+  - This is normal for unpacked extensions in development
+  - Simply reload it using "Load unpacked" again, or keep the extracted folder
+
+- **Still having issues?**
+  - Open an issue on [GitHub](https://github.com/gustavocaiano/yt-loop-extension/issues)
 
 ## Files
 
 - `manifest.json` - Extension configuration
 - `content.js` - Main script that enables loop mode
-- `background.js` - Service worker (minimal, for future features)
+- `background.js` - Service worker
 
 ## Development
 
 To modify the extension:
 1. Make changes to the files
-2. Go to `arc://extensions/`
+2. Go to `arc://extensions/` or `chrome://extensions/`
 3. Click the refresh icon on the extension card
 4. Reload the YouTube page to test changes
 
+## License
+
+This project is open source and available for personal use.
