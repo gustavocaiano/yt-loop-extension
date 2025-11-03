@@ -19,32 +19,11 @@ A Chrome/Arc extension that automatically enables "Loop Playlist" mode on YouTub
 
 ### Step 2: Load the Extension
 
-#### For Arc Browser:
+Works the same way for **Arc Browser** and **Chrome** (both are Chromium-based):
 
-1. **Open Arc Browser** and navigate to:
-   ```
-   arc://extensions/
-   ```
-   Or go to **Arc Settings** → **Extensions** → **Manage Extensions**
-
-2. **Enable Developer Mode**:
-   - Toggle the "Developer mode" switch in the top-right corner
-
-3. **Load the Extension**:
-   - Click the **"Load unpacked"** button
-   - Navigate to and select the **extracted folder** (the one containing `manifest.json`)
-   - Click "Select Folder" or "Open"
-
-4. **Verify Installation**:
-   - You should see "YouTube Playlist Loop Enabler" in your extensions list
-   - The extension is now active!
-
-#### For Chrome Browser:
-
-1. **Open Chrome** and navigate to:
-   ```
-   chrome://extensions/
-   ```
+1. **Open your browser** and navigate to:
+   - **Arc**: `arc://extensions/` (or Arc Settings → Extensions → Manage Extensions)
+   - **Chrome**: `chrome://extensions/`
 
 2. **Enable Developer Mode**:
    - Toggle the "Developer mode" switch in the top-right corner
@@ -96,7 +75,7 @@ A Chrome/Arc extension that automatically enables "Loop Playlist" mode on YouTub
 
 To modify the extension:
 1. Make changes to the files
-2. Go to `arc://extensions/` or `chrome://extensions/`
+2. Go to `arc://extensions/` (Arc) or `chrome://extensions/` (Chrome)
 3. Click the refresh icon on the extension card
 4. Reload the YouTube page to test changes
 
