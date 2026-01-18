@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Loop icon: circular arrow representing playlist loop -->
+  <circle cx="64" cy="64" r="50" fill="none" stroke="#4285f4" stroke-width="8" stroke-linecap="round"/>
+  <!-- Arrow head -->
+  <path d="M 78 42 L 95 42 L 85 32 M 95 42 L 85 52" stroke="#4285f4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Arrow body -->
+  <path d="M 95 42 Q 95 53 95 64 Q 95 75 86 86 Q 77 97 64 97 Q 51 97 42 86" stroke="#4285f4" stroke-width="8" stroke-linecap="round" fill="none"/>
+</svg>
