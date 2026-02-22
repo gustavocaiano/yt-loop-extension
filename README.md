@@ -1,84 +1,55 @@
-# YouTube Playlist Loop Enabler
+<p align="center">
+  <img src="./assets/yt-loop-badge.svg" width="96" alt="yt-loop-extension logo" />
+</p>
 
-A Chrome/Arc extension that automatically enables "Loop Playlist" mode on YouTube playlist pages. Never worry about manually enabling loop mode again!
+<h1 align="center">yt-loop-extension</h1>
 
-## Features
+<p align="center">
+  Keep YouTube playlists looping automatically, even after refreshes and track changes.
+</p>
 
-- 🔄 Automatically enables loop playlist mode when a playlist is loaded
-- ⏭️ Works when playlist items are selected or skipped
-- 🔃 Activates on page refresh
-- 🤫 Runs silently in the background - no configuration needed
+<p align="center">
+  <a href="https://github.com/gustavocaiano/yt-loop-extension/releases/latest">Download latest release</a>
+  ·
+  <a href="https://github.com/gustavocaiano/yt-loop-extension/issues">Report issue</a>
+</p>
 
-## Installation
+## What it does
 
-### Step 1: Download the Extension
+- Detects YouTube playlist pages (`list=` in URL)
+- Watches player and playlist UI updates with `MutationObserver`
+- Automatically enables **Loop Playlist** when it is disabled
+- Runs in the background with no setup screens
 
-1. Go to the [Releases](https://github.com/gustavocaiano/yt-loop-extension/releases) page
-2. Download the latest `yt-loop-extension.zip` file
-3. Extract the ZIP file to a folder on your computer (remember where you saved it!)
+## Install (Chrome / Arc)
 
-### Step 2: Load the Extension
-
-Works the same way for **Arc Browser** and **Chrome** (both are Chromium-based):
-
-1. **Open your browser** and navigate to:
-   - **Arc**: `arc://extensions/` (or Arc Settings → Extensions → Manage Extensions)
-   - **Chrome**: `chrome://extensions/`
-
-2. **Enable Developer Mode**:
-   - Toggle the "Developer mode" switch in the top-right corner
-
-3. **Load the Extension**:
-   - Click the **"Load unpacked"** button
-   - Navigate to and select the **extracted folder** (the one containing `manifest.json`)
-   - Click "Select Folder" or "Open"
-
-4. **Verify Installation**:
-   - You should see "YouTube Playlist Loop Enabler" in your extensions list
-   - The extension is now active!
+1. Download the latest ZIP from [Releases](https://github.com/gustavocaiano/yt-loop-extension/releases/latest).
+2. Extract it to a folder.
+3. Open:
+   - Arc: `arc://extensions/`
+   - Chrome: `chrome://extensions/`
+4. Enable **Developer mode**.
+5. Click **Load unpacked** and select the extracted folder.
 
 ## Usage
 
-1. Navigate to any YouTube playlist (URL contains `list=`)
-2. The extension will **automatically enable loop mode** - no action needed!
-3. Works every time you load, refresh, or skip items in a playlist
+1. Open any YouTube playlist.
+2. The extension automatically activates loop mode.
+3. It keeps working on refresh, skip, and playlist item changes.
 
-## How It Works
+## Project files
 
-- The extension runs a content script on YouTube playlist pages
-- It watches the DOM for changes (playlist loaded, song skipped, page refreshed)
-- When the loop button appears and is not active, it automatically clicks it
-- Uses a MutationObserver to detect when the playlist panel changes
-
-## Troubleshooting
-
-- **Extension not working?**
-  - Make sure you're on a YouTube playlist page (URL should contain `list=`)
-  - Check the browser console (F12) for any error messages
-  - Try refreshing the YouTube page
-  - Make sure you extracted the ZIP file and selected the folder (not the ZIP)
-
-- **Extension disappeared after restart?**
-  - This is normal for unpacked extensions in development
-  - Simply reload it using "Load unpacked" again, or keep the extracted folder
-
-- **Still having issues?**
-  - Open an issue on [GitHub](https://github.com/gustavocaiano/yt-loop-extension/issues)
-
-## Files
-
-- `manifest.json` - Extension configuration
-- `content.js` - Main script that enables loop mode
-- `background.js` - Service worker
+- `manifest.json` - extension manifest
+- `content.js` - loop detection and auto-toggle logic
+- `background.js` - service worker
+- `icons/` - extension icons
 
 ## Development
 
-To modify the extension:
-1. Make changes to the files
-2. Go to `arc://extensions/` (Arc) or `chrome://extensions/` (Chrome)
-3. Click the refresh icon on the extension card
-4. Reload the YouTube page to test changes
+1. Edit source files.
+2. Reload extension in the browser extensions page.
+3. Refresh YouTube playlist tab to test.
 
 ## License
 
-This project is open source and available for personal use.
+Open source for personal use.
